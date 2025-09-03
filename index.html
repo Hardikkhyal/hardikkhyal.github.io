@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardik Khyal | Links</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0A1123, #3A3E6C, #8387C3);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .card {
+      text-align: center;
+      padding: 38px 30px 28px;
+      max-width: 420px;
+      width: 92%;
+      background: rgba(10, 17, 35, 0.65);
+      border-radius: 28px;
+      box-shadow: 0 12px 28px rgba(58, 62, 108, 0.50);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -50px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, #8387C3 0%, transparent 70%);
+      opacity: 0.22;
+      z-index: 0;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3.5px solid #959BB5;
+      object-fit: cover;
+      margin-bottom: 16px;
+      box-shadow: 0 0 24px rgba(131,135,195,0.63);
+      position: relative;
+      z-index: 1;
+      transition: box-shadow .35s;
+    }
+    .profile-pic:hover {
+      box-shadow: 0 0 40px #3A3E6C, 0 0 0px #959BB5;
+    }
+    h1 {
+      margin: 12px 0;
+      font-size: 2.1rem;
+      color: #EAEAEA;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #a5a8e6 0%, #8387C3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 1rem;
+      color: #CACACA;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      z-index: 2;
+      position: relative;
+    }
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      background: linear-gradient(135deg, #3A3E6C 50%, #8387C3 100%);
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 12px;
+      transition: all 0.32s cubic-bezier(.64,.09,.08,1);
+      border: none;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 6px 15px rgba(58, 62, 108, 0.21);
+      font-size: 1rem;
+    }
+    .links a:hover {
+      background: linear-gradient(135deg, #959BB5 35%, #ECEBF1 100%);
+      color: #0A1123;
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 12px 32px rgba(131,135,195,0.25);
+    }
+    .social-icons {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      z-index: 2;
+      position: relative;
+    }
+    .social-icons a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.9rem;
+      color: #CACACA;
+      background: rgba(28,35,80,0.46);
+      border-radius: 50%;
+      padding: 13px;
+      position: relative;
+      transition: 0.3s cubic-bezier(.44,.65,.10,1.18);
+      box-shadow: 0 4px 16px rgba(149, 155, 181, .08);
+    }
+    .social-icons a:hover {
+      color: #fff;
+      background: #959BB5;
+      box-shadow: 0 0 40px #8387C3;
+      transform: scale(1.12) translateY(-2px);
+    }
+    /* Tooltip styles */
+    .social-icons a[data-title]:hover:before {
+      content: attr(data-title);
+      position: absolute;
+      left: 50%;
+      top: -36px;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg,#8387C3 60%, #959BB5 100%);
+      color: #242852;
+      font-size: 0.96rem;
+      padding: 4px 16px;
+      border-radius: 7px;
+      white-space: nowrap;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      opacity: 0.93;
+      pointer-events: none;
+      z-index: 5;
+      box-shadow: 0 3px 12px rgba(100,112,157,.35);
+      animation: tooltip-glow .45s cubic-bezier(.44,.65,.10,1.18);
+    }
+    @keyframes tooltip-glow {
+      0% { opacity: 0; transform: translateX(-50%) scale(0.86);}
+      80% { opacity: 1; transform: translateX(-50%) scale(1.06);}
+      100% { opacity: 0.93; transform: translateX(-50%) scale(1);}
+    }
+    /* Responsive tweaks */
+    @media (max-width: 520px) {
+      .card {padding: 22px 7px;}
+      h1 {font-size: 1.4rem;}
+      .profile-pic {width: 90px; height: 90px;}
+      .social-icons { gap: 13px; }
+      .social-icons a {font-size: 1.4rem; padding: 9px;}
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/4b0bdf9d0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.postimg.cc/3x2PZ0Km/Untitled622-20250826122329.jpg/120" alt="Profile" class="profile-pic">
+    <h1>Hardik Khyal</h1>
+    <p>💻 CSE Student | 🎨 Graphic Designer | 🌐Web Developer | 🎵 music producer <br>
+      🚀 I love turning ideas into reality — whether that’s through code, design, or music. 🔍 Always exploring new tech, mastering creative tools Also known as <strong>"Anime_art_fusion"</strong>
+    </p>
+    <div class="links">
+      <a href="www.linkedin.com/in/hardikkhyal" target="_blank">LinkedIn</a>
+      <a href="https://www.facebook.com/share/1B3nFCCY5X/" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com/@khyalhardik" target="_blank">YouTube</a>
+      <a href="https://github.com/Hardikkhyal" target="_blank">GitHub</a>
+      <a href="https://hardikkhyal.gumroad.com/?fbclid=IwdGRjcAMlShlleHRuA2FlbQIxMQABHtbXlNDcg1msAEhm-makJX5aekojHhtopdH2ChTqmjO-sULWo6bSGoGobzEe_aem_ug2ATSpGuSohrhEJ-HHGWg" target="_blank">Gumroad</a>
+      <a href="https://www.instagram.com/anime_art_fusion?igsh=djc3YnBqYnVlend3" target="_blank">Instagram</a>
+      <a href="https://pin.it/6oInDh7UE" target="_blank">Pinterest</a>
+      <a href="https://www.threads.com/@anime_art_fusion" target="_blank">Threads</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/anime_art_fusion?igsh=djc3YnBqYnVlend3" target="_blank" data-title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/" target="_blank" data-title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/@khyalhardik" target="_blank" data-title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/Hardikkhyal" target="_blank" data-title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.facebook.com/share/1B3nFCCY5X/" target="_blank" data-title="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+</body>
+</html>
