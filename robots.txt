@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
-Allow: /index.html
+Allow: /
 
 Sitemap: https://hardikkhyal.me/sitemap.xml
