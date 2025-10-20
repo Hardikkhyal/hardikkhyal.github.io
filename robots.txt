@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /
 Allow: /index.html
 
-Sitemap: https://hardikkhyal.github.io/sitemap.xml
+Sitemap: https://hardikkhyal.me/sitemap.xml
